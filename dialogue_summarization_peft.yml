@@ -1,0 +1,37 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: dialogue_summarization_peft
+display_name: Dialogue Summarization with PEFT
+version: 1
+type: command
+inputs:
+  dataset_name: 
+    type: string
+  model_name:
+    type: string
+    default: google/flan-t5-base
+  output_dir:
+    type: string
+    default: ./peft_model
+  num_train_epochs:
+    type: integer
+    default: 1
+  train_batch_size:
+    type: integer
+    default: 4
+  eval_batch_size:
+    type: integer
+    default: 4
+  num_samples:
+    type: integer
+    default: 10
+code: ./
+environment: AzureML-ACPT-pytorch-1.13-py38-cuda11.7-gpu@latest
+command: >-
+  python dialogue_summarization_peft.py 
+  --dataset_name ${{inputs.dataset_name}}
+  --model_name ${{inputs.model_name}}
+  --output_dir ${{inputs.output_dir}}
+  --num_train_epochs ${{inputs.num_train_epochs}}
+  --train_batch_size ${{inputs.train_batch_size}}
+  --eval_batch_size ${{inputs.eval_batch_size}}
+  --num_samples ${{inputs.num_samples}}

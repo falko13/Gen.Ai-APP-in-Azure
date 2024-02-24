@@ -1,0 +1,18 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: sentiment_prediction_merged
+display_name: Sentiment Prediction with Integrated Tokenization
+version: 1
+type: command
+inputs:
+  dialogue: 
+    type: string
+outputs:
+  sentiment_output:
+    type: uri_file
+code: ./src
+environment: azureml:AzureML-ACPT-pytorch-1.13-py38-cuda11.7-gpu@latest
+compute: azureml:cpu-cluster
+command: >-
+  python sentiment_prediction.py 
+  --dialogue ${{inputs.dialogue}}
+  --output ${{outputs.sentiment_output}}
