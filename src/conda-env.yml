@@ -1,0 +1,17 @@
+name: basic-env-cpu
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - torch==1.13.1
+    - rouge_score==0.1.2
+  - python=3.10.11
+  - datasets==2.17.0
+  - torchdata==0.5.1
+  - transformers==4.27.2
+  - evaluate==0.4.0
+  - loralib==0.1.1
+  - peft==0.3.0
+  - mlflow
