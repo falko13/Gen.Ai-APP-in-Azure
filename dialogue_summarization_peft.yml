@@ -37,7 +37,7 @@ inputs:
     type: integer
     default: 10
 code: ./
-environment: AzureML-ACPT-pytorch-1.13-py38-cuda11.7-gpu@latest
+environment: azureml:docker-image-llm@latest
 command: >-
   python dialogue_summarization_peft.py 
   --dataset_name ${{inputs.dataset_name}}
