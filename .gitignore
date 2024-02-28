@@ -1,2 +1,16 @@
+# Ignore all files with 'aml' in the name
 *aml*
+
+# Vim swap files
 *.swp
+
+# Directory for saved models
+notebooks/saved_models/
+notebooks/your_mlflow_tracking_uri/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore Jupyter notebook checkpoints
+/.ipynb_checkpoints/
