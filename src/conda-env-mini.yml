@@ -6,5 +6,6 @@ dependencies:
 - pip:
   - mlflow==2.4
   - cloudpickle==2.2.1
+  - torch==1.13.1
   - transformers==4.27.2
 name: mlflow-env
