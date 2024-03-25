@@ -6,13 +6,13 @@
 
 ## Project Status
 
-:warning: **Project In Progress** - The components provided are in development and may undergo significant changes. They are not yet optimized for production. The Azure version for sentiment analysis has been completed, demonstrating effective sentiment analysis capabilities. Further development will focus on enhancing the sentiment model itself in the General Python version.
+:warning: **Project In Progress** - The components provided are in development and may undergo significant changes. They are not yet optimized for production. The Azure version for sentiment analysis has been completed, demonstrating effective sentiment analysis capabilities. The General Python Version now includes foundational scripts for both sentiment analysis and dialogue summarization, with the current focus being on establishing a working script example and foundation rather than optimizing accuracy.
 
 ## Versions
 
 ### General Python Version
 
-Under further development, this version can run independently of any cloud services, demonstrating the core functionality of sentiment analysis and dialogue summarization through standalone scripts. Future enhancements will aim to improve the sentiment model's accuracy and efficiency.
+This version can now run independently of any cloud services, providing foundational scripts for sentiment analysis and dialogue summarization. The current stage aims at creating a working script example and foundation with the addition of a new standalone script, `model_tool.py`, in the `standalone` folder at the root of the project. Future enhancements will aim to refine these standalone scripts further and may also focus on improving the models' accuracy and efficiency.
 
 ### Azure Python SDK 2.0 Version
 
@@ -37,12 +37,13 @@ Under further development, this new component fine-tunes a pre-trained model on 
   - `sentiment_analysis.py` and `sentiment_analysis_batches.py` for online and batch inference.
   - `score.py` and `score_batches.py` for scoring scripts.
   - `conda-env-mini.yml` and `conda-env.yml` for environment configurations.
+- **Standalone**: New `model_tool.py` script added to the `standalone` folder for direct script execution without Azure dependencies.
 - **Tests**: Unit tests for scripts in `../tests`.
 - **Components**: Azure ML component defined in `sentiment_prediction.yml`.
 
 ## Future Work
 
-- Further refinement of the sentiment prediction component for enhanced accuracy in the General Python version.
+- Refinement of the standalone scripts in the General Python version for sentiment analysis and dialogue summarization.
 - Development and testing of the **Dialogue Summarization with PEFT** component.
 - Anticipated development and integration of additional NLP components and features.
 
